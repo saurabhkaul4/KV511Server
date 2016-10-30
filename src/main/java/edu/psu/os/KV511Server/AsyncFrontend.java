@@ -24,7 +24,7 @@ public class AsyncFrontend {
 	public static long time1 = System.nanoTime();
 	public static int count = 0;
 
-	public static void measure() {
+	public synchronized static void measure() {
 		long time2 = System.nanoTime();
 		count++;
 		if (time2 - time1 > 24000000000L) {

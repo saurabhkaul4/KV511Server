@@ -76,7 +76,7 @@ public class Frontend {
 		}
 	}
 
-	public static void measure() {
+	public synchronized static void measure() {
 		long time2 = System.nanoTime();
 		count++;
 		if (time2 - time1 > 24000000000L) {
